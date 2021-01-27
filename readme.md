@@ -1,4 +1,4 @@
-# Dialog Annotator Web
+# Worker Verifier
 
 This is a project to verify authorized Mturkers. 
 
