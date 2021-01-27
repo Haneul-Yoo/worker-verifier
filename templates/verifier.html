@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block body %}
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+            Argument Generation Study - Worker Verification
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="content v-large-padded h-padded">
+        <br/>
+        <h4>Only authorized personnel allowed to participate in this HIT.</h4>
+        <h4>Please enter a verification code.</h4>
+        <form action="/done" method="GET" onsubmit="return isCode();" name="form">
+            Verification Code: <input name="code">
+            Worker ID: <input name="wid">
+            <input type="submit" value="Submit" class="button is-success"/>
+        </form>
+    </div>
+</div>
+
+<script>
+    function isCode() {
+        wid = document.forms["form"]["wid"].value;
+        if (wid === "") {
+            alert("Please enter your worker ID.")
+            return false;
+        }
+        code = document.forms["form"]["code"].value;
+        if (code === "") {
+            alert("Please enter a verification code.")
+            return false;
+        }
+        else if (code !== "fIvrmN3DK3SWgYIfpehxIF0xQCuNpUedfR1p5gXT") {
+            alert('Sorry! You have entered an invalid code.');
+            return false;
+        }
+    }
+</script>
+{% endblock %}

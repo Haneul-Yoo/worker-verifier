@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+            Argument Generation Study - Worker Verification
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="content v-large-padded">
+        <br/>
+        <h3>Thank you for your verification!</h3>
+        <p>
+            Your worker ID has been successfully submitted to the server!<br />
+            Please return to Amazon Mechanical Turk page and enter the code below.
+        </p>
+        <code>{{ code }}</code>
+</div>
+{% endblock %}
