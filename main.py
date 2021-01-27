@@ -3,7 +3,7 @@ import random
 from flask import Flask, redirect, request, render_template
 
 app = Flask(__name__)
-output_path = './'
+output_path = '.'
 
 def is_user_id(uid):
     file_path = '%s/user_ids/%s.json' % (output_path, uid)
